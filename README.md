@@ -1,4 +1,4 @@
-# Welcome To The MERN Channel
+# Welcome To The MERN Interview Channel
 
 ## JavaScript (Core + Advanced)
 
