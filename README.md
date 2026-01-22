@@ -46,4 +46,4 @@ obj.name = "Shivam"; // allowed (object mutation)
 ```
 ---
 
-## Q.2 Explain hoisting with example
+### Q.2 Explain hoisting with example
