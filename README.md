@@ -1,6 +1,6 @@
 # Welcome To The MERN Interview Channel
 
-## JavaScript (Core + Advanced)
+## *JavaScript (Core + Advanced)
 
 ### Q.1 Difference between var, let, and const
 #### 1. var
