@@ -5,9 +5,9 @@
 ### Q.1 Difference between var, let, and const
 #### 1. Var
    
-**Definition:** var is a function-scoped variable. It can be re-declared and updated and is hoisted with undefined.
+**Definition:** `var` is a function-scoped variable. It can be re-declared and updated and is hoisted with undefined.
 
-Example:
+**Example:**
 
 ```js
 var x = 10;
