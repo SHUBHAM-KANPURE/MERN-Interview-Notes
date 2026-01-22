@@ -19,7 +19,7 @@ console.log(x); // 30
 
 #### 2. let
 
-**Definition:** `let` is block-scoped. It can be updated but not re-declared in the same scope. Hoisted but not accessible
+**Definition:** `let` is block-scoped. It can be updated but not re-declared in the same scope. Hoisted but not accessible before declaration.
 
 **Example:**
 ```js
