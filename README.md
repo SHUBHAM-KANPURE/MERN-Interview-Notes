@@ -1,6 +1,6 @@
 # Welcome To The MERN Interview Channel
 
-## *JavaScript (Core + Advanced)
+## JavaScript (Core + Advanced)
 
 ### Q.1 Difference between var, let, and const
 #### 1. var
@@ -47,3 +47,12 @@ obj.name = "Shivam"; // allowed (object mutation)
 ---
 
 ### Q.2 Explain hoisting with example
+
+**Definition:** `Hoisting` is JavaScript’s behavior where variable and function declarations are moved to the top of their scope during compilation, before code execution.
+
+**Example:**
+```js
+console.log(a); // undefined
+var a = 10;
+```
+---
