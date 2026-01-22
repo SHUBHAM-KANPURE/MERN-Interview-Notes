@@ -5,7 +5,7 @@
 ### Q. Difference between var, let, and const
 
 Definition:
-* Var
+~ Var
 var is a function-scoped variable. It can be re-declared and updated and is hoisted with undefined.
 
 Example:
