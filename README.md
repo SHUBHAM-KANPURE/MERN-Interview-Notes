@@ -1,4 +1,5 @@
-### AA
+# Welcome To The MERN Channel
 
-- a
-- b
+## JavaScript (Core + Advanced)
+
+```js
