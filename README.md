@@ -3,7 +3,7 @@
 ## JavaScript (Core + Advanced)
 
 ### Q. Difference between var, let, and const
-1. Var
+#### 1. Var
    
 Definition:
 
