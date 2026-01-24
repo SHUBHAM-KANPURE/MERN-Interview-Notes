@@ -56,3 +56,10 @@ console.log(a); // undefined
 var a = 10;
 ```
 ---
+---
+
+## Node.js
+
+### Q.1 What is Node.js and why is it fast?
+**Definition:** `Node.js` is a JavaScript runtime environment built on Chrome’s V8 engine that allows JavaScript to run outside the browser, mainly on the server side.
+
