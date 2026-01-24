@@ -90,7 +90,7 @@ var a = 10;
 ### Q.4 Explain single-threaded nature of Node
 #### 1. What does “Single-Threaded” mean in Node.js?
 **Definition:** `Node.js` is single-threaded because it uses one main thread (the event loop) to execute JavaScript code.
-
+----
 #### 2. Then how does Node handle multiple requests?
 Node.js is single-threaded but NOT single-tasked.
 
