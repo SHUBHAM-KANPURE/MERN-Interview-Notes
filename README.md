@@ -63,3 +63,7 @@ var a = 10;
 ### Q.1 What is Node.js and why is it fast?
 **Definition:** `Node.js` is a JavaScript runtime environment built on Chrome’s V8 engine that allows JavaScript to run outside the browser, mainly on the server side.
 
+### Q.2 Why is Node.js Fast?
+#### 1. V8 Engine
+- Compiles JS to machine code
+- Very fast execution
