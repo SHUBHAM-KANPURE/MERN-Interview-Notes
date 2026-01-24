@@ -42,7 +42,7 @@ const obj = { name: "Shubham" };
 obj.name = "Shivam"; // allowed (object mutation)
 
 ```
----
+-------------------------------------------------------------------------------------------------------------------------
 
 ### Q.2 Explain hoisting with example
 **Definition:** `Hoisting` is JavaScript’s behavior where variable and function declarations are moved to the top of their scope during compilation, before code execution.
@@ -60,7 +60,7 @@ var a = 10;
 ### Q.1 What is Node.js and why is it fast?
 **Definition:** `Node.js` is a JavaScript runtime environment built on Chrome’s V8 engine that allows JavaScript to run outside the browser, mainly on the server side.
 
----
+-------------------------------------------------------------------------------------------------------------------------
 
 ### Q.2 Why is Node.js Fast?
 #### 1. V8 Engine
@@ -77,7 +77,7 @@ var a = 10;
 #### 4. No Thread Creation Overhead
 - Uses fewer system resources
 
----
+-------------------------------------------------------------------------------------------------------------------------
 
 ### Q.3 Node.js Use Cases
 ✔ Real-time apps (chat, gaming)
@@ -85,7 +85,7 @@ var a = 10;
 ✔ Streaming apps
 ✔ IoT applications
 
----
+-------------------------------------------------------------------------------------------------------------------------
 
 ### Q.4 Explain single-threaded nature of Node
 #### 1. What does “Single-Threaded” mean in Node.js?
@@ -123,7 +123,7 @@ console.log("End");
 - Child Processes
 - Cluster module
 
----
+-------------------------------------------------------------------------------------------------------------------------
 
 ### Q.5 What is event-driven architecture?
 **Definition:** `Event-Driven` Architecture (EDA) is a design pattern where the flow of the application is determined by events such as user actions, messages, or system changes.
