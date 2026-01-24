@@ -175,7 +175,7 @@ emitter.emit("orderPlaced", 101);
 - Writable
 - Duplexों
 - Transform
-- 
+
 **Example:**
 ```js
 const fs = require("fs");
