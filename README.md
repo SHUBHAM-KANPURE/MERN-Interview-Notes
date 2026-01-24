@@ -1,6 +1,6 @@
 # Welcome To The MERN Interview Channel
 
-## JavaScript (Core + Advanced)
+## -> JavaScript (Core + Advanced)
 
 ### Q.1 Difference between var, let, and const
 #### 1. var
@@ -58,7 +58,7 @@ var a = 10;
 ---
 ---
 
-## Node.js
+## -> Node.js
 
 ### Q.1 What is Node.js and why is it fast?
 **Definition:** `Node.js` is a JavaScript runtime environment built on Chrome’s V8 engine that allows JavaScript to run outside the browser, mainly on the server side.
