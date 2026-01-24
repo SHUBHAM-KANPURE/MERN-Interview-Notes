@@ -117,7 +117,6 @@ console.log("End");
 
 ### 4. Limitation
 ❌ CPU-intensive tasks block the event loop.
-
 ✔ Solution:
 
 - Worker Threads
