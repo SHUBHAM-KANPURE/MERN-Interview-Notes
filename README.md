@@ -110,4 +110,15 @@ setTimeout(() => {
 
 console.log("End");
 ```
+#### 3. Why Node.js Uses Single Thread?
+✔ Avoids thread-locking & deadlocks
+✔ Lightweight & memory efficient
+✔ Easier to scale with async I/O
 
+### 4. Limitation
+❌ CPU-intensive tasks block the event loop
+✔ Solution:
+
+` Worker Threads
+- Child Processes
+- Cluster module
