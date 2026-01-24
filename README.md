@@ -119,6 +119,6 @@ console.log("End");
 ❌ CPU-intensive tasks block the event loop
 ✔ Solution:
 
-` Worker Threads
+- Worker Threads
 - Child Processes
 - Cluster module
