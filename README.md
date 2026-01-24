@@ -116,7 +116,8 @@ console.log("End");
 ✔ Easier to scale with async I/O
 
 ### 4. Limitation
-❌ CPU-intensive tasks block the event loop
+❌ CPU-intensive tasks block the event loop.
+
 ✔ Solution:
 
 - Worker Threads
