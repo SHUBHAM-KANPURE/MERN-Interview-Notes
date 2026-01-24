@@ -164,3 +164,7 @@ emitter.emit("orderPlaced", 101);
 ### 4. Disadvantages
 ❌ Debugging can be complex
 ❌ Event flow hard to track
+
+-------------------------------------------------------------------------------------------------------------------------
+
+### Q.6 What are streams?
