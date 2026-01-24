@@ -168,3 +168,33 @@ emitter.emit("orderPlaced", 101);
 -------------------------------------------------------------------------------------------------------------------------
 
 ### Q.6 What are streams?
+**Definition:** `Streams` are objects in Node.js that allow you to read or write data in chunks, instead of loading the entire data into memory at once.
+
+#### 1. Types of Streams
+- Readable
+- Writable
+- Duplexों
+- Transform
+- 
+**Example:**
+```js
+const fs = require("fs");
+
+const stream = fs.createReadStream("file.txt");
+
+stream.on("data", chunk => {
+  console.log(chunk.toString());
+});
+```
+
+#### 2. Why Use Streams?
+✔ Handles large files
+✔ Low memory usage
+✔ Faster processing
+✔ Real-time data handling
+
+#### 3. Real-World Use Cases
+- File upload/download
+- Video streaming
+- Data processing pipelines
+- API responses
