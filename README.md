@@ -122,3 +122,45 @@ console.log("End");
 - Worker Threads
 - Child Processes
 - Cluster module
+
+---
+
+### Q.5 What is event-driven architecture?
+**Definition:** `Event-Driven` Architecture (EDA) is a design pattern where the flow of the application is determined by events such as user actions, messages, or system changes.
+
+#### 1. Key Components
+-Event Producer
+- Event
+- Event Consumer
+
+**Example:**
+```js
+const EventEmitter = require("events");
+const emitter = new EventEmitter();
+
+emitter.on("orderPlaced", (orderId) => {
+  console.log("Processing order:", orderId);
+});
+
+emitter.emit("orderPlaced", 101);
+```
+
+#### 2. Real-World Examples
+✔ Button click in UI
+✔ API request handling
+✔ Message queues (Kafka, RabbitMQ)
+✔ WebSockets & real-time apps
+
+### 3. Why Node.js Fits EDA Well?
+- Non-blocking I/O
+- Event loop based
+- Highly scalable
+
+### 4. Advantages
+✔ Loose coupling
+✔ Scalability
+✔ Faster response
+
+### 4. Disadvantages
+❌ Debugging can be complex
+❌ Event flow hard to track
