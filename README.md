@@ -649,28 +649,24 @@ console.log(arr);  // [9, 7, 8, 5, 3, 2]
 
 **Example:**
 ```js
-const arr = [1, [2, [3, 4]], 5];
-// → [1, 2, 3, 4, 5]
+const arr = [1, [2, 5], 4, 3];
 
-function sortArr(arr) {
-    let finalArr = [];
+function sortedArr(arr) {
     
+    let result = [];
     for(let i = 0; i < arr.length; i++) {
         if(Array.isArray(arr[i])) {
-            console.log('is array:->',arr[i]);
-                
-			const inner = sortArr(arr[i]); // recursion
-			for (let j = 0; j < inner.length; j++) {
-				finalArr.push(inner[j]);
-			}
+            for(let j = 0; j < arr[i].length; j++) {
+                result.push(arr[i][j]);
+            }
         } else {
-            console.log('is not array:->', arr[i]);
-            finalArr.push(arr[i]);
+            result.push(arr[i]);
         }
     }
-    return finalArr;    
+
+    return result;
 }
 
-console.log(sortArr(arr));
+console.log(sortedArr(arr));
 ```
 -------------------------------------------------------------------------------------------------------------------------
