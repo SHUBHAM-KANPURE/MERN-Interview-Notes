@@ -644,3 +644,36 @@ while (start < end) {
 console.log(arr);  // [9, 7, 8, 5, 3, 2]
 ```
 -------------------------------------------------------------------------------------------------------------------------
+
+### Q.5. Make single array
+
+**Example:**
+```js
+const arr = [1, [2, [3, 4]], 5];
+// → [1, 2, 3, 4, 5]
+
+function sortArr(arr) {
+    let finalArr = [];
+    
+    for(let i = 0; i < arr.length; i++) {
+        if(Array.isArray(arr[i])) {
+            console.log('is array:->',arr[i]);
+            // for (let j = 0; j < arr[i].length; j++) {
+                // finalArr.push(arr[i][j]);
+                
+                const inner = sortArr(arr[i]); // recursion
+                for (let j = 0; j < inner.length; j++) {
+                    finalArr.push(inner[j]);
+                }
+            // }
+        } else {
+            console.log('is not array:->', arr[i]);
+            finalArr.push(arr[i]);
+        }
+    }
+    return finalArr;    
+}
+
+console.log(sortArr(arr));
+```
+-------------------------------------------------------------------------------------------------------------------------
