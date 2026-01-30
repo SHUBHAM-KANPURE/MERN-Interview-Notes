@@ -619,3 +619,28 @@ function mySorting(arr) {
 console.log("Ans:", mySorting(arr));
 ```
 -------------------------------------------------------------------------------------------------------------------------
+
+### Q.5. Reverse an array without using any method or any extra array
+
+**Example:**
+```js
+const arr = [2, 3, 5,, 8, 7, 9];
+
+let start = 0;
+let end = arr.length -1;
+
+while (start < end) {
+    let temp = arr[start];
+    // console.log('1111', temp);
+    
+    arr[start] = arr[end];
+    // console.log('2222', arr[start]);
+    
+    arr[end] = temp;
+    // console.log('3333', arr[start]);
+    start++;
+    end--
+}
+console.log(arr);  // [9, 7, 8, 5, 3, 2]
+```
+-------------------------------------------------------------------------------------------------------------------------
