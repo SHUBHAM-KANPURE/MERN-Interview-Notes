@@ -556,6 +556,9 @@ one("Shubham", two);
 
 ### Q.2. Closer example
 
+**Definition:**
+A closure is created when a function remembers variables from its outer (lexical) scope, even after the outer function has finished executing.
+
 **Example:**
 ```js
 function first() {
