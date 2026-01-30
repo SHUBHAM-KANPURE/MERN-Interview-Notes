@@ -658,14 +658,11 @@ function sortArr(arr) {
     for(let i = 0; i < arr.length; i++) {
         if(Array.isArray(arr[i])) {
             console.log('is array:->',arr[i]);
-            // for (let j = 0; j < arr[i].length; j++) {
-                // finalArr.push(arr[i][j]);
                 
-                const inner = sortArr(arr[i]); // recursion
-                for (let j = 0; j < inner.length; j++) {
-                    finalArr.push(inner[j]);
-                }
-            // }
+			const inner = sortArr(arr[i]); // recursion
+			for (let j = 0; j < inner.length; j++) {
+				finalArr.push(inner[j]);
+			}
         } else {
             console.log('is not array:->', arr[i]);
             finalArr.push(arr[i]);
