@@ -534,3 +534,47 @@ stream.on("data", chunk => {
 
 -------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------
+
+## -> JavaScript Logical Questions (Problem solving)
+
+### Q.1. A callback is function that runs after another function finises its task.
+**Example:**
+```js
+
+function one(name, callback) {
+    console.log("Hello " + name);
+    callback();
+}
+
+function two() {
+    console.log("Bye!");
+}
+
+one("Shubham", two);
+```
+-------------------------------------------------------------------------------------------------------------------------
+
+### Q.2. How would you remove duplicate characters from a string while preserving the original order, spaces, and case sensitivity—using only logical iteration?
+
+```js
+const str = "Happy new year";
+
+function sorting(str) {
+    console.log(str);
+    let read = {};
+    let result = "";
+    
+    for(let i = 0; i < str.length; i++) {
+        if(!read[str[i]]) {
+            // console.log('read', read[str[i]]);
+            read[str[i]] = true;
+            result += str[i];
+        }
+    }
+    
+    return result;
+}
+
+console.log(sorting(str));
+```
+-------------------------------------------------------------------------------------------------------------------------
