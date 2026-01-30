@@ -554,7 +554,25 @@ one("Shubham", two);
 ```
 -------------------------------------------------------------------------------------------------------------------------
 
-### Q.2. How would you remove duplicate characters from a string while preserving the original order, spaces, and case sensitivity—using only logical iteration?
+### Q.2. Closer example
+
+**Example:**
+```js
+function first() {
+	let count = 0;
+	return function second () {
+    	count++;
+    	return count
+	}
+}
+ 
+let a = first();
+console.log(a());
+console.log(a());
+```
+-------------------------------------------------------------------------------------------------------------------------
+
+### Q.3. How would you remove duplicate characters from a string while preserving the original order, spaces, and case sensitivity—using only logical iteration?
 
 ```js
 const str = "Happy new year";
