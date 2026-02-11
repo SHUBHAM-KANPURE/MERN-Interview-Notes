@@ -642,7 +642,7 @@ console.log("Ans:", mySorting(arr));
 
 **Example:**
 ```js
-const arr = [2, 3, 5,, 8, 7, 9];
+const arr = [2, 3, 5, 8, 7, 9];
 
 let start = 0;
 let end = arr.length -1;
