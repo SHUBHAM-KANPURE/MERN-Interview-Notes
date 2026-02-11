@@ -342,7 +342,21 @@ stream.on("data", chunk => {
 -------------------------------------------------------------------------------------------------------------------------
 
 ### Q.21 Difference between authentication and authorization
+-------------------------------------------------------------------------------------------------------------------------
 
+### Q.22 What is Non-Blocking I/O?
+**Definition:** `Non-blocking I/O` means Node.js does not wait for a task (like DB call or file read) to complete. Instead, it continues executing the next code.
+
+**Example:**
+```js
+fs.readFile("file.txt", () => {
+  console.log("File read completed");
+});
+console.log("Hello");
+```
+**Output:**
+Hello
+File read completed
 -------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------
 
