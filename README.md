@@ -359,6 +359,46 @@ Hello
 File read completed
 ```
 -------------------------------------------------------------------------------------------------------------------------
+
+### Q.23 What is fs module?
+**Definition:** `fs` (File System) module is a built-in Node.js module used to interact with the file system (read, write, update, delete files).
+
+#### 1. Read file
+
+**Example:**
+```js
+const fs = require('fs');
+
+fs.readFile('demo.txt', 'utf8', (err, data) => {
+  if (err) {
+    console.log(err);
+    return;
+  }
+  console.log(data);
+});
+```
+
+#### 2. Write File
+
+**Example:**
+```js
+fs.writeFile('demo.txt', 'Hello Shubham', (err) => {
+  if (err) throw err;
+  console.log('File written successfully');
+});
+```
+
+#### 3. Write File
+
+**Example:**
+```js
+fs.appendFile('demo.txt', '\nNew Line Added', (err) => {
+  if (err) throw err;
+  console.log('Data appended');
+});
+```
+
+-------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------
 
 ## -> Express.js (Node js)
