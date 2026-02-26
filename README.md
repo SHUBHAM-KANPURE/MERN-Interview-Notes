@@ -592,7 +592,11 @@ fs.appendFile('demo.txt', '\nNew Line Added', (err) => {
 
 ## -> JavaScript Logical Questions (Problem solving)
 
-### Q.1. A callback is function that runs after another function finises its task.
+### Q.1. What is callback?
+
+**Definition:**
+A callback is function that runs after another function finises its task.
+
 **Example:**
 ```js
 
