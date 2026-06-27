@@ -733,7 +733,7 @@ console.log(sortedArr(arr));
 ```
 -------------------------------------------------------------------------------------------------------------------------
 
-### Importants
+## -> Importants
 
 **JS Questions:**
 https://resources.theboringeducation.com/resources/javascript-interview-questions
