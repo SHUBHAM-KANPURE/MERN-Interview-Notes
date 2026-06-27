@@ -736,4 +736,4 @@ console.log(sortedArr(arr));
 ### Importants
 
 **JS Questions:**
-https://resources.theboringeducation.com/resources/javascript-interview-questions?utm_source=sp_auto_dm&utm_referrer=sp_auto_dm&fbclid=PAT01DUASsqLJleHRuA2FlbQIxMABzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAae-8dFYlukab28OBS0xRPYH1T9U4f8okUMKo8uN45-JWf43AYJVE8cI5hGvTg_aem_rKWaIbNMRkKP5jjTuXP4dA
+https://resources.theboringeducation.com/resources/javascript-interview-questions
