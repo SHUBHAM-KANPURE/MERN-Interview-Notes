@@ -957,7 +957,7 @@ console.log(a());
 ```
 
 **Example 2:**
-```
+```js
 function outer() {
     let count = 0;
 
