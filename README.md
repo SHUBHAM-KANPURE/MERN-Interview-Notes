@@ -941,7 +941,7 @@ one("Shubham", two);
 **Definition:**
 A closure is created when a function remembers variables from its outer (lexical) scope, even after the outer function has finished executing.
 
-**Example:**
+**Example 1:**
 ```js
 function first() {
 	let count = 0;
@@ -954,6 +954,24 @@ function first() {
 let a = first();
 console.log(a());
 console.log(a());
+```
+
+**Example 2:**
+```
+function outer() {
+    let count = 0;
+
+    function inner() {
+        count++;
+        console.log(count);
+    }
+
+    return inner;
+}
+
+const counter = outer();
+counter();
+counter();
 ```
 -------------------------------------------------------------------------------------------------------------------------
 
