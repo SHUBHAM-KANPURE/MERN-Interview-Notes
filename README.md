@@ -943,21 +943,6 @@ A closure is created when a function remembers variables from its outer (lexical
 
 **Example 1:**
 ```js
-function first() {
-	let count = 0;
-	return function second () {
-    	count++;
-    	return count
-	}
-}
- 
-let a = first();
-console.log(a());
-console.log(a());
-```
-
-**Example 2:**
-```js
 function outer() {
     let count = 0;
 
@@ -972,6 +957,21 @@ function outer() {
 const counter = outer();
 counter();
 counter();
+```
+
+**Example 2:**
+```js
+function first() {
+	let count = 0;
+	return function second () {
+    	count++;
+    	return count
+	}
+}
+ 
+let a = first();
+console.log(a());
+console.log(a());
 ```
 -------------------------------------------------------------------------------------------------------------------------
 
