@@ -986,6 +986,47 @@ console.log(runFunction);
 ```
 -------------------------------------------------------------------------------------------------------------------------
 
+### Q.3. Reverse a string without built-in methods
+
+**Example 1:**
+```js
+let text = "hello";
+let arr = text.split("");
+
+    let start = 0;
+    let end = arr.length - 1;
+
+    while(start < end) {
+        let temp = arr[start];
+
+        arr[start] = arr[end];
+        arr[end] = temp;
+
+        start++;
+        end--;
+    }
+
+console.log(arr.join(""));
+```
+
+**Example 2:**
+```js
+const str = "hello";
+
+function reverseString(str) {
+    let result = "";
+
+    for (let i = str.length - 1; i >= 0; i--) {
+        result += str[i];
+    }
+
+    return result;
+}
+
+console.log(reverseString(str));
+```
+-------------------------------------------------------------------------------------------------------------------------
+
 ### Q.1. What is callback?
 
 **Definition:**
