@@ -1048,7 +1048,7 @@ console.log(arr);  // [9, 7, 8, 5, 3, 2]
 ```
 -------------------------------------------------------------------------------------------------------------------------
 
-### Q.5. Make single array
+### Q.5. Make single array or turns a nested multi-dimensional list into a single flat, one-dimensional list.
 
 **Example:**
 ```js
