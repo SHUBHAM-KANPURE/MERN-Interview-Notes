@@ -972,7 +972,7 @@ function removeDuplicate(arr) {
     let read = {};
     let result = [];
 
-    for(i = 0; i < arr.length; i ++) {
+    for(let i = 0; i < arr.length; i ++) {
         if(!read[arr[i]]) {
             result.push(arr[i]);
             read[arr[i]] = true;
