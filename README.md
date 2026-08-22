@@ -1050,7 +1050,28 @@ console.log(arr);  // [9, 7, 8, 5, 3, 2]
 
 ### Q.5. Make single array or turns a nested multi-dimensional list into a single flat, one-dimensional list.
 
-**Example:**
+**Example 1:**
+```js
+const original = [1, [2, [3, 4], 5], 6];
+
+function flattenArray(arr) {
+
+    let result = [];
+    for(let item of arr) {
+        if(Array.isArray(item)) {
+            result.push(...flattenArray(item));
+        } else {
+            result.push(item);
+        }
+    }
+    return result;
+}
+
+const runFunction = flattenArray(original);
+console.log(runFunction);
+```
+
+**Example 2:**
 ```js
 const arr = [1, [2, 5], 4, 3];
 
