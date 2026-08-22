@@ -1000,7 +1000,7 @@ console.log(sorting(str));
 ```
 -------------------------------------------------------------------------------------------------------------------------
 
-### Q.4. Array the elements of an array by ascending order
+### Q.4. Sort the elements of an array in ascending order.
 
 **Example:**
 ```js
