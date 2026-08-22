@@ -911,9 +911,80 @@ fs.appendFile('demo.txt', '\nNew Line Added', (err) => {
 ### Q.8 How you deploy your app?
 
 -------------------------------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------------------------------------
 
 ## -> JavaScript Logical Questions (Problem solving)
+
+### Q.1. Flatten an array or Make single array or turns a nested multi-dimensional list into a single flat, one-dimensional list.
+
+**Example 1:**
+```js
+const original = [1, [2, [3, 4], 5], 6];
+
+function flattenArray(arr) {
+
+    let result = [];
+    for(let item of arr) {
+        if(Array.isArray(item)) {
+            result.push(...flattenArray(item));
+        } else {
+            result.push(item);
+        }
+    }
+    return result;
+}
+
+const runFunction = flattenArray(original);
+console.log(runFunction);
+```
+
+**Example 2:**
+```js
+const arr = [1, [2, 5], 4, 3];
+
+function sortedArr(arr) {
+    
+    let result = [];
+    for(let i = 0; i < arr.length; i++) {
+        if(Array.isArray(arr[i])) {
+            for(let j = 0; j < arr[i].length; j++) {
+                result.push(arr[i][j]);
+            }
+        } else {
+            result.push(arr[i]);
+        }
+    }
+
+    return result;
+}
+
+console.log(sortedArr(arr));
+```
+-------------------------------------------------------------------------------------------------------------------------
+
+### Q.2. Remove duplicates from array
+
+**Example:**
+```js
+const arr = [1, 3, 4, 2, 2, 4, 5];
+
+function removeDuplicate(arr) {
+
+    let read = {};
+    let result = [];
+
+    for(i = 0; i < arr.length; i ++) {
+        if(!read[arr[i]]) {
+            result.push(arr[i]);
+            read[arr[i]] = true;
+        }
+    }
+    return result;
+}
+
+const runFunction = removeDuplicate(arr);
+console.log(runFunction);
+```
+-------------------------------------------------------------------------------------------------------------------------
 
 ### Q.1. What is callback?
 
@@ -1045,53 +1116,6 @@ while (start < end) {
     end--
 }
 console.log(arr);  // [9, 7, 8, 5, 3, 2]
-```
--------------------------------------------------------------------------------------------------------------------------
-
-### Q.5. Make single array or turns a nested multi-dimensional list into a single flat, one-dimensional list.
-
-**Example 1:**
-```js
-const original = [1, [2, [3, 4], 5], 6];
-
-function flattenArray(arr) {
-
-    let result = [];
-    for(let item of arr) {
-        if(Array.isArray(item)) {
-            result.push(...flattenArray(item));
-        } else {
-            result.push(item);
-        }
-    }
-    return result;
-}
-
-const runFunction = flattenArray(original);
-console.log(runFunction);
-```
-
-**Example 2:**
-```js
-const arr = [1, [2, 5], 4, 3];
-
-function sortedArr(arr) {
-    
-    let result = [];
-    for(let i = 0; i < arr.length; i++) {
-        if(Array.isArray(arr[i])) {
-            for(let j = 0; j < arr[i].length; j++) {
-                result.push(arr[i][j]);
-            }
-        } else {
-            result.push(arr[i]);
-        }
-    }
-
-    return result;
-}
-
-console.log(sortedArr(arr));
 ```
 -------------------------------------------------------------------------------------------------------------------------
 
