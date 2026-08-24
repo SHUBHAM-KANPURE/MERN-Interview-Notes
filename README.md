@@ -1077,6 +1077,7 @@ function secondLargest(arr) {
 console.log(secondLargest(arr));
 // 15
 ```
+-------------------------------------------------------------------------------------------------------------------------
 
 ### Q.5. Find a largest number
 
@@ -1099,6 +1100,38 @@ function largestNumber() {
 
 const callFunction = largestNumber(arr);
 console.log('Largest Number:', callFunction);
+```
+-------------------------------------------------------------------------------------------------------------------------
+
+### Q.6. Debounce function implementation
+
+**Definition:** Debouncing ensures a function is executed only after a certain amount of time has passed since the last call.
+It is commonly used for search inputs, API calls, resize events, etc.
+
+**Example:**
+```js
+function debounce(fn, delay) {
+    let timer;
+
+    return function (...args) {
+        clearTimeout(timer);
+
+        timer = setTimeout(() => {
+            fn(...args);
+        }, delay);
+    };
+}
+
+function search(value) {
+    console.log("API call:", value);
+}
+
+const debouncedSearch = debounce(search, 500);
+
+debouncedSearch("r");
+// debouncedSearch("re");
+// debouncedSearch("rea");
+// debouncedSearch("react");
 ```
 -------------------------------------------------------------------------------------------------------------------------
 
