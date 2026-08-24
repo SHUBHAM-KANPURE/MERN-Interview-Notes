@@ -1137,7 +1137,7 @@ debouncedSearch("r");
 
 ### Q.7. Deep clone an object
 
-**Definition:**A deep clone creates a completely independent copy of an object, including its nested objects and arrays. Changes to the clone do not affect the original object.
+**Definition:** A deep clone creates a completely independent copy of an object, including its nested objects and arrays. Changes to the clone do not affect the original object.
 
 **Example:**
 ```js
