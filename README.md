@@ -1135,6 +1135,30 @@ debouncedSearch("r");
 ```
 -------------------------------------------------------------------------------------------------------------------------
 
+### Q.7. Deep clone an object
+
+**Definition:**A deep clone creates a completely independent copy of an object, including its nested objects and arrays. Changes to the clone do not affect the original object.
+
+**Example:**
+```js
+const original = {
+    name: "Shubham",
+    address: {
+        city: "Indore"
+    }
+}
+
+// console.log(original);
+
+const clone = structuredClone(original);
+
+clone.address.city = "Bhopal";
+
+console.log(original.address.city);
+console.log(clone.address.city);
+```
+-------------------------------------------------------------------------------------------------------------------------
+
 ### Q.1. What is callback?
 
 **Definition:**
