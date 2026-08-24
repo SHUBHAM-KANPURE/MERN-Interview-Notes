@@ -1027,6 +1027,81 @@ console.log(reverseString(str));
 ```
 -------------------------------------------------------------------------------------------------------------------------
 
+### Q.4. Find second largest number
+
+**Example 1:**
+```js
+const arr = [10, 5, 20, 8, 15];
+
+function secondLargestNumber() {
+    let largest = arr[0];
+    let secondLargest = arr[1];
+
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] > largest) {
+            secondLargest = largest;
+            largest = arr[i];
+        } else if(arr[i] > secondLargest && arr[i] !== largest) {
+            secondLargest = arr[i];
+        }
+    }
+
+    return secondLargest
+}
+
+const callFunction = secondLargestNumber(arr);
+console.log('Second Largest Number:', callFunction);
+// 15
+```
+
+**Example 2:**
+```js
+const arr = [10, 5, 20, 8, 15];
+
+function secondLargest(arr) {
+    let largest = -Infinity;
+    let second = -Infinity;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > largest) {
+            second = largest;
+            largest = arr[i];
+        } else if (arr[i] > second && arr[i] !== largest) {
+            second = arr[i];
+        }
+    }
+
+    return second;
+}
+
+console.log(secondLargest(arr));
+// 15
+```
+
+### Q.5. Find a largest number
+
+**Example:**
+```js
+const arr = [10, 5, 20, 8, 15];
+
+function largestNumber() {
+    let largest = arr[0];
+
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] > largest) {
+            secondLargest = largest;
+            largest = arr[i];
+        }
+    }
+
+    return largest
+}
+
+const callFunction = largestNumber(arr);
+console.log('Largest Number:', callFunction);
+```
+-------------------------------------------------------------------------------------------------------------------------
+
 ### Q.1. What is callback?
 
 **Definition:**
