@@ -1187,7 +1187,25 @@ const functionCalling = countFrequency(text);
 console.log(functionCalling);
 // Output: { h: 1, e: 1, l: 2, o: 1 }
 ```
+-------------------------------------------------------------------------------------------------------------------------
 
+### Q.10. Sort array of objects
+
+**Definition:**
+We can sort an array of objects based on a specific property using the sort() method and a comparison function.
+
+**Example:**
+```js
+const users = [
+    { name: "Shubham", age: 30 },
+    { name: "Rahul", age: 25 },
+    { name: "Amit", age: 28 }
+];
+
+users.sort((a, b) => a.age - b.age);
+
+console.log(users);
+```
 -------------------------------------------------------------------------------------------------------------------------
 
 ### Q.1. What is callback?
