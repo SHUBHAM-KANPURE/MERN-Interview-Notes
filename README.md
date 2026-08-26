@@ -1210,7 +1210,125 @@ console.log(users);
 ```
 -------------------------------------------------------------------------------------------------------------------------
 
-### Q.1. What is callback?
+### Q.11. Promise polyfill (basic)
+
+**Definition:**
+A **Promise polyfill** is a custom implementation of the Promise functionality using JavaScript, mainly to understand how Promises work internally.
+
+A basic Promise polyfill needs to handle:
+
+* `pending`
+* `fulfilled`
+* `rejected`
+* `.then()`
+* `.catch()`
+
+### Basic Example
+
+```js
+function MyPromise(executor) {
+    let state = "pending";
+    let value;
+    let onFulfilled;
+    let onRejected;
+
+    function resolve(result) {
+        if (state !== "pending") return;
+
+        state = "fulfilled";
+        value = result;
+
+        if (onFulfilled) {
+            onFulfilled(value);
+        }
+    }
+
+    function reject(error) {
+        if (state !== "pending") return;
+
+        state = "rejected";
+        value = error;
+
+        if (onRejected) {
+            onRejected(value);
+        }
+    }
+
+    this.then = function (successCallback, errorCallback) {
+        onFulfilled = successCallback;
+        onRejected = errorCallback;
+
+        return this;
+    };
+
+    executor(resolve, reject);
+}
+```
+
+### Using Our Basic Promise
+
+```js
+const promise = new MyPromise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("Data received");
+    }, 1000);
+});
+
+promise.then((data) => {
+    console.log(data);
+});
+```
+
+### Output
+
+```text
+Data received
+```
+
+### How It Works
+
+```text
+MyPromise created
+       ↓
+   pending
+       ↓
+   resolve()
+       ↓
+  fulfilled
+       ↓
+ .then() callback
+       ↓
+"Data received"
+```
+
+If `reject()` is called:
+
+```js
+const promise = new MyPromise((resolve, reject) => {
+    reject("Something went wrong");
+});
+
+promise.then(
+    (data) => console.log(data),
+    (error) => console.log(error)
+);
+```
+
+Output:
+
+```text
+Something went wrong
+```
+
+### Interview Answer
+
+> **A Promise polyfill is a custom implementation of Promise functionality. A basic polyfill maintains the Promise state and provides methods like `then()` to handle fulfilled and rejected results.**
+
+**Interview Tip:** This is a **basic educational polyfill**. A production-quality Promise implementation also needs proper asynchronous execution, chaining, thenable handling, error propagation, and methods such as `catch()` and `finally()`.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+### Q.12. What is callback?
 
 **Definition:**
 A callback is function that runs after another function finishes its task.
@@ -1231,7 +1349,7 @@ one("Shubham", two);
 ```
 -------------------------------------------------------------------------------------------------------------------------
 
-### Q.2. Closer example
+### Q.13. Closer example
 
 **Definition:**
 A closure is created when a function remembers variables from its outer (lexical) scope, even after the outer function has finished executing.
@@ -1270,7 +1388,7 @@ console.log(a());
 ```
 -------------------------------------------------------------------------------------------------------------------------
 
-### Q.3. How would you remove duplicate characters from a string while preserving the original order, spaces, and case sensitivity—using only logical iteration?
+### Q.14. How would you remove duplicate characters from a string while preserving the original order, spaces, and case sensitivity—using only logical iteration?
 
 ```js
 const str = "Happy new year";
@@ -1295,7 +1413,7 @@ console.log(sorting(str));
 ```
 -------------------------------------------------------------------------------------------------------------------------
 
-### Q.4. Sort the elements of an array in ascending order.
+### Q.15. Sort the elements of an array in ascending order.
 
 **Example:**
 ```js
@@ -1318,7 +1436,7 @@ console.log("Ans:", mySorting(arr));
 ```
 -------------------------------------------------------------------------------------------------------------------------
 
-### Q.5. Reverse an array without using any method or any extra array
+### Q.16. Reverse an array without using any method or any extra array
 
 **Example:**
 ```js
