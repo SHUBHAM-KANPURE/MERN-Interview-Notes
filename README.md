@@ -1157,6 +1157,39 @@ console.log(functionCalling);
 ```
 -------------------------------------------------------------------------------------------------------------------------
 
+### Q.9. Count frequency of characters
+
+**Definition:**
+Character frequency means counting how many times each character appears in a string.
+
+**Example:**
+```js
+let text = "hello";
+
+function countFrequency(text) {
+
+    let frequency = {};
+
+    for(let i = 0; i < text.length; i++) {
+        let char = text[i];
+        
+        if(frequency[char]) {
+            frequency[char]++;
+        }
+        else {
+            frequency[char] = 1;
+        }
+    }
+    return frequency;
+}
+
+const functionCalling = countFrequency(text);
+console.log(functionCalling);
+// Output: { h: 1, e: 1, l: 2, o: 1 }
+```
+
+-------------------------------------------------------------------------------------------------------------------------
+
 ### Q.1. What is callback?
 
 **Definition:**
