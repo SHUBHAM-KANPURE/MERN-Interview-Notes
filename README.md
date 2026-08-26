@@ -878,7 +878,7 @@ fs.appendFile('demo.txt', '\nNew Line Added', (err) => {
 
 -------------------------------------------------------------------------------------------------------------------------
 
-## -> JavaScript Logical or Coding Questions (Problem solving)
+## -> JavaScript Logical or Coding Questions (Problem solving or DSA)
 
 ### Q.1. Flatten an array or Make single array or turns a nested multi-dimensional list into a single flat, one-dimensional list.
 
