@@ -1196,6 +1196,8 @@ We can sort an array of objects based on a specific property using the sort() me
 
 **Example:**
 ```js
+// Ascending Order
+
 const users = [
     { name: "Shubham", age: 30 },
     { name: "Rahul", age: 25 },
