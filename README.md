@@ -877,6 +877,7 @@ fs.appendFile('demo.txt', '\nNew Line Added', (err) => {
 ### Q.8 How you deploy your app?
 
 -------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
 
 ## -> JavaScript Logical or Coding Questions (Problem solving or DSA)
 
@@ -1125,6 +1126,37 @@ console.log(clone.address.city);
 ```
 -------------------------------------------------------------------------------------------------------------------------
 
+### Q.8. Check palindrome
+
+**Definition:**
+A palindrome is a word, number, or string that reads the same from left to right and right to left.
+
+**Example:**
+```js
+let text = "madam";
+
+function checkPalindrome(text) {
+
+    let start = 0;
+    let end = text.length - 1;
+
+    while(start < end) {
+        if(text[start] !== text[end]) {
+            return false;
+        }
+
+        start++;
+        end--;
+    }
+    return true;
+}
+
+const functionCalling = checkPalindrome(text);
+console.log(functionCalling);
+// Output: true
+```
+-------------------------------------------------------------------------------------------------------------------------
+
 ### Q.1. What is callback?
 
 **Definition:**
@@ -1256,6 +1288,7 @@ while (start < end) {
 }
 console.log(arr);  // [9, 7, 8, 5, 3, 2]
 ```
+-------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------
 
 ## -> Importants
