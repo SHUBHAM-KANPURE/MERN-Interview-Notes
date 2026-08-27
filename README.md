@@ -53,6 +53,111 @@ console.log(a); // undefined
 var a = 10;
 ```
 -------------------------------------------------------------------------------------------------------------------------
+
+### Q.3 What is closure? Where have you used it?
+**Definition:** A `closure` is created when a function remembers variables from its outer (lexical) scope, even after the outer function has finished executing.
+
+**Example:**
+```js
+function outer() {
+  let count = 0;
+
+  function inner() {
+    count++;
+    console.log(count);
+  }
+
+  return inner;
+}
+
+const counter = outer();
+counter(); // 1
+counter(); // 2
+```
+
+#### Where Have You Used Closure?
+#### 1. Data Privacy
+
+```
+function createUser() {
+  let password = "secret";
+
+  return {
+    getPassword() {
+      return password;
+    }
+  };
+}
+// Used to hide sensitive data
+```
+
+#### 2. Counters (Very Common)
+
+```
+function counter() {
+  let count = 0;
+  return () => ++count;
+}
+
+const inc = counter();
+inc(); // 1
+inc(); // 2
+// Used in pagination, likes, view counts
+```
+
+#### 3. Event Handlers
+```
+function buttonClick(name) {
+  return function () {
+    console.log("Hello " + name);
+  };
+}
+
+btn.addEventListener("click", buttonClick("Shubham"));
+// Used in React event handling
+```
+
+#### 4. Debounce / Throttle
+```
+function debounce(fn, delay) {
+  let timer;
+  return function () {
+    clearTimeout(timer);
+    timer = setTimeout(fn, delay);
+  };
+}
+// Used for search input, resize events
+```
+-------------------------------------------------------------------------------------------------------------------------
+
+### Q.16 What is the difference between synchronous and asynchronous JavaScript?
+
+#### 1. Synchronous JavaScript
+**Definition:** `Synchronous JavaScript` executes code one line at a time, in order. The next task waits until the current task is completed.
+
+**Example:**
+```js
+console.log("Start");
+
+console.log("Processing");
+
+console.log("End");
+```
+
+#### 2. Asynchronous JavaScript
+**Definition:** `Asynchronous JavaScript` allows a task to start and lets JavaScript continue executing other code without waiting for that task to finish.
+
+**Example:**
+```js
+console.log("Start");
+
+setTimeout(() => {
+    console.log("Async task");
+}, 2000);
+
+console.log("End");
+```
+-------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------
 
 ## -> React.js
