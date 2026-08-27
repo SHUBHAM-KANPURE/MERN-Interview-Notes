@@ -153,7 +153,7 @@ console.log("End");
 ```
 -------------------------------------------------------------------------------------------------------------------------
 
-### Q.4 Difference between call, apply, bind
+### Q.5 Difference between call, apply, bind
 
 **Definition:** They are JavaScript function methods used to manually set the value of this and reuse a function for different objects.
 
@@ -195,6 +195,57 @@ boundGreet();
 * `call` → When arguments are known
 * `apply` → When arguments are in array
 * `bind` → When function needs to run later (React events)
+-------------------------------------------------------------------------------------------------------------------------
+
+### Q.6 What are promises? Promise chaining?
+
+**Definition:** A `Promise` is a JavaScript object that represents the future result of an asynchronous operation — either fulfilled, rejected, or pending.
+It helps handle async code without callback hell.
+
+#### Promise States
+* `Pending` – initial state
+* `Fulfilled` – operation successful
+* `Rejected` – operation failed
+
+**Example:**
+```js
+const promise = new Promise((resolve, reject) => {
+  let success = true;
+
+  if (success) {
+    resolve("Task completed");
+  } else {
+    reject("Task failed");
+  }
+});
+
+promise
+  .then(result => console.log(result))
+  .catch(error => console.log(error));
+```
+
+#### What is Promise Chaining?
+
+**Definition:**  `Promise chaining` means using multiple .then() calls one after another, where each .then() returns a new promise.
+Used when async tasks depend on previous results.
+
+**Example:**
+```js
+function step1() {
+  return Promise.resolve("Step 1 done");
+}
+
+function step2(msg) {
+  return Promise.resolve(msg + " → Step 2 done");
+}
+
+step1()
+  .then(res => step2(res))
+  .then(res => console.log(res))
+  .catch(err => console.log(err));
+
+// Output: Step 1 done → Step 2 done
+```
 -------------------------------------------------------------------------------------------------------------------------
 
 ### Q.16 What is the difference between synchronous and asynchronous JavaScript?
