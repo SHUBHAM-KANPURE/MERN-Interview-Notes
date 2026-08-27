@@ -78,7 +78,7 @@ counter(); // 2
 #### Where Have You Used Closure?
 #### 1. Data Privacy
 
-```
+```js
 function createUser() {
   let password = "secret";
 
@@ -93,7 +93,7 @@ function createUser() {
 
 #### 2. Counters (Very Common)
 
-```
+```js
 function counter() {
   let count = 0;
   return () => ++count;
@@ -106,7 +106,7 @@ inc(); // 2
 ```
 
 #### 3. Event Handlers
-```
+```js
 function buttonClick(name) {
   return function () {
     console.log("Hello " + name);
@@ -118,7 +118,7 @@ btn.addEventListener("click", buttonClick("Shubham"));
 ```
 
 #### 4. Debounce / Throttle
-```
+```js
 function debounce(fn, delay) {
   let timer;
   return function () {
@@ -142,7 +142,7 @@ It decides when and which function should be executed next.
 * Event Loop pushes them to Call Stack when it is empty
 
 **Example:**
-```
+```js
 console.log("Start");
 
 setTimeout(() => {
@@ -151,6 +151,50 @@ setTimeout(() => {
 
 console.log("End");
 ```
+-------------------------------------------------------------------------------------------------------------------------
+
+### Q.4 Difference between call, apply, bind
+
+**Definition:** They are JavaScript function methods used to manually set the value of this and reuse a function for different objects.
+
+#### 1. call()
+**Definition:** Calls a function immediately and accepts arguments one by one.
+
+**Example:**
+```js
+function greet(city) {
+  console.log(this.name + " from " + city);
+}
+
+const user = { name: "Shubham" };
+
+greet.call(user, "Indore");
+// Output: Shubham from Indore
+```
+
+#### 2. apply()
+**Definition:** Same as call, but arguments are passed as an array.
+
+**Example:**
+```js
+greet.apply(user, ["Indore"]);
+// Output: Shubham from Indore
+```
+
+#### 3. bind()
+**Definition:** Does not execute immediately. It returns a new function with this bound permanently.
+
+**Example:**
+```js
+const boundGreet = greet.bind(user, "Indore");
+boundGreet();
+// Output: Shubham from Indore
+```
+
+#### When to Use What? (Interview Tip)
+* `call` → When arguments are known
+* `apply` → When arguments are in array
+* `bind` → When function needs to run later (React events)
 -------------------------------------------------------------------------------------------------------------------------
 
 ### Q.16 What is the difference between synchronous and asynchronous JavaScript?
