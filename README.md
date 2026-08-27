@@ -130,6 +130,29 @@ function debounce(fn, delay) {
 ```
 -------------------------------------------------------------------------------------------------------------------------
 
+### Q.4 Explain event loop
+
+**Definition:** The `Event Loop` is a mechanism in JavaScript that allows non-blocking, asynchronous code execution by continuously checking the Call Stack and Callback / Task Queues.
+It decides when and which function should be executed next.
+
+#### How Event Loop Works (Step by Step)
+* Call Stack executes synchronous code
+* Async operations go to Web APIs
+* Completed callbacks move to Queues
+* Event Loop pushes them to Call Stack when it is empty
+
+**Example:**
+```
+console.log("Start");
+
+setTimeout(() => {
+  console.log("Timeout");
+}, 0);
+
+console.log("End");
+```
+-------------------------------------------------------------------------------------------------------------------------
+
 ### Q.16 What is the difference between synchronous and asynchronous JavaScript?
 
 #### 1. Synchronous JavaScript
