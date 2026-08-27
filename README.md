@@ -248,6 +248,35 @@ step1()
 ```
 -------------------------------------------------------------------------------------------------------------------------
 
+### Q.7 async/await vs promises
+
+#### What are Promises?
+**Definition:** A `Promise` represents the future result of an asynchronous operation and is handled using `.then()` and `.catch()`.
+
+*Example:**
+```js
+fetchData()
+  .then(res => processData(res))
+  .then(result => console.log(result))
+  .catch(err => console.error(err));
+```
+
+#### What is async/await?
+**Definition:** `async/await` is syntactic sugar over promises that allows writing asynchronous code in a `synchronous-looking` way.
+
+```js
+async function getData() {
+  try {
+    const res = await fetchData();
+    const result = await processData(res);
+    console.log(result);
+  } catch (err) {
+    console.error(err);
+  }
+}
+```
+-------------------------------------------------------------------------------------------------------------------------
+
 ### Q.16 What is the difference between synchronous and asynchronous JavaScript?
 
 #### 1. Synchronous JavaScript
