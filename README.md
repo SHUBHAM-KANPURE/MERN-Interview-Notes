@@ -293,7 +293,7 @@ function debounce(fn, delay) {
   };
 }
 
-// **Use case:** Search bar, input validation, resize event
+// Use case: Search bar, input validation, resize event
 ```
 
 #### What is Throttling?
@@ -311,12 +311,49 @@ function throttle(fn, limit) {
     }
   };
 }
-// **Use case:** Scroll, button clicks, API rate limiting
+// Use case: Scroll, button clicks, API rate limiting
 ```
 
 #### When to Use What? (Interview Tip)
 * User typing → `Debounce`
 * User scrolling → `Throttle`
+-------------------------------------------------------------------------------------------------------------------------
+
+### Q.9 Shallow copy vs deep copy
+
+#### 1. Shallow Copy
+**Definition:** A `shallow copy` copies only the top-level properties. If the object contains `nested objects`, their references are shared.
+Changes in nested data affect both copies.
+
+**Example:**
+```js
+const obj1 = { name: "Shubham", address: { city: "Indore" } };
+
+const obj2 = { ...obj1 }; // shallow copy
+obj2.address.city = "Bhopal";
+
+console.log(obj1.address.city); // Bhopal ❌
+```
+
+#### 2. Deep Copy
+**Definition:** A `deep copy` creates a completely independent copy, including all nested objects.
+Changes do NOT affect the original object.
+
+**Example:**
+```js
+const obj1 = { name: "Shubham", address: { city: "Indore" } };
+
+const obj2 = JSON.parse(JSON.stringify(obj1));
+obj2.address.city = "Bhopal";
+
+console.log(obj1.address.city); // Indore ✅
+```
+
+#### Deep Copy Methods
+* `JSON.parse(JSON.stringify())`
+* `structuredClone()`
+* Custom recursive function
+* Libraries: `lodash.cloneDeep()`
 -------------------------------------------------------------------------------------------------------------------------
 
 ### Q.16 What is the difference between synchronous and asynchronous JavaScript?
