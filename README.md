@@ -199,7 +199,7 @@ boundGreet();
 
 ### Q.6 What are promises? Promise chaining?
 
-**Definition:** A `Promise` is a JavaScript object that represents the future result of an asynchronous operation — either fulfilled, rejected, or pending.
+**Definition:** A `Promise` is a JavaScript object that represents the future result of an asynchronous operation — either `fulfilled`, `rejected`, or `pending`.
 It helps handle async code without callback hell.
 
 #### Promise States
@@ -226,7 +226,7 @@ promise
 
 #### What is Promise Chaining?
 
-**Definition:**  `Promise chaining` means using multiple .then() calls one after another, where each .then() returns a new promise.
+**Definition:**  `Promise chaining` means using multiple .then() calls one after another, where each `.then()` returns a new promise.
 Used when async tasks depend on previous results.
 
 **Example:**
@@ -253,7 +253,7 @@ step1()
 #### What are Promises?
 **Definition:** A `Promise` represents the future result of an asynchronous operation and is handled using `.then()` and `.catch()`.
 
-*Example:**
+**Example:**
 ```js
 fetchData()
   .then(res => processData(res))
@@ -264,6 +264,7 @@ fetchData()
 #### What is async/await?
 **Definition:** `async/await` is syntactic sugar over promises that allows writing asynchronous code in a `synchronous-looking` way.
 
+**Example:**
 ```js
 async function getData() {
   try {
@@ -275,6 +276,47 @@ async function getData() {
   }
 }
 ```
+-------------------------------------------------------------------------------------------------------------------------
+
+### Q.8 What is debouncing & throttling?
+
+#### What is Debouncing?
+**Definition:** `Debouncing` ensures that a function is executed only after a certain delay, once the user stops triggering the event.
+
+**Example:**
+```js
+function debounce(fn, delay) {
+  let timer;
+  return function (...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn.apply(this, args), delay);
+  };
+}
+
+// **Use case:** Search bar, input validation, resize event
+```
+
+#### What is Throttling?
+**Definition:** `Throttling` ensures that a function is executed at most once in a fixed time interval, no matter how many times the event occurs.
+
+**Example:**
+```js
+function throttle(fn, limit) {
+  let inThrottle = false;
+  return function (...args) {
+    if (!inThrottle) {
+      fn.apply(this, args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+    }
+  };
+}
+// **Use case:** Scroll, button clicks, API rate limiting
+```
+
+#### When to Use What? (Interview Tip)
+* User typing → `Debounce`
+* User scrolling → `Throttle`
 -------------------------------------------------------------------------------------------------------------------------
 
 ### Q.16 What is the difference between synchronous and asynchronous JavaScript?
