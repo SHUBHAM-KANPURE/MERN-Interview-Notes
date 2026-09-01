@@ -356,6 +356,38 @@ console.log(obj1.address.city); // Indore ✅
 * Libraries: `lodash.cloneDeep()`
 -------------------------------------------------------------------------------------------------------------------------
 
+### Q.10 Explain this keyword in different contexts
+
+**Definition:** `this` refers to the object that is currently "executing" the function. Its value isn't fixed — it depends on how a function is called, not where it's defined.
+-------------------------------------------------------------------------------------------------------------------------
+
+### Q.11 Arrow function vs normal function
+
+#### 1. Normal Function
+**Definition:** A `normal function` is defined using the `function` keyword. It has its own `this`, `arguments`, and can be used as a constructor.
+
+**Example:**
+```js
+function greet() {
+  console.log(this.name);
+}
+
+const user = { name: "Shubham" };
+greet.call(user); // Shubham
+```
+
+#### 2. Arrow Function
+**Definition:** An `arrow function` is a shorter syntax function that does NOT have its own `this`.
+It inherits `this` from its parent (lexical scope).
+
+**Example:**
+```js
+const greet = () => {
+  console.log(this.name);
+};
+```
+-------------------------------------------------------------------------------------------------------------------------
+
 ### Q.16 What is the difference between synchronous and asynchronous JavaScript?
 
 #### 1. Synchronous JavaScript
