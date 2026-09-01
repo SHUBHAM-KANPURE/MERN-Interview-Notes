@@ -468,7 +468,6 @@ console.log("Start");
 ```
 * Executes immediately.
 
-
 2️⃣ Web APIs
 ```js
 setTimeout(() => {
@@ -478,16 +477,13 @@ setTimeout(() => {
 * Browser sends timer to Web API
 * JS engine continues execution
 
-
 3️⃣ Callback Queue
 * After 2 seconds, callback moves to Callback (Task) Queue
-
 
 4️⃣ Event Loop
 * Event loop keeps checking:
   * Is call stack empty?
 * If yes → moves callback to call stack
-
 
 5️⃣ Execution
 ```js
@@ -520,9 +516,9 @@ Timeout
 #### Important Interview Points
 * setTimeout is not exact timing
 * Minimum delay may be affected by:
- * Call stack blocking
- * Browser throttling
- * Minimum delay (4ms in some cases)
+  * Call stack blocking
+  * Browser throttling
+  * Minimum delay (4ms in some cases)
 
 #### setTimeout in Node.js
 * Uses libuv
