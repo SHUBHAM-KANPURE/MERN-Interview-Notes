@@ -453,6 +453,62 @@ users?.[0]?.name;
 * Useful for API responses
 -------------------------------------------------------------------------------------------------------------------------
 
+### Q.15 How does setTimeout work internally?
+
+**Definition:** `setTimeout` does not run the code exactly after the given time.
+It registers a timer and executes the callback only after:
+
+* The delay time is completed and
+* The call stack is empty
+
+#### Internal Working (Step-by-Step)
+1️⃣ Call Stack
+```js
+console.log("Start");
+```
+* Executes immediately.
+
+2️⃣ Web APIs
+```js
+setTimeout(() => {
+  console.log("Timeout");
+}, 2000);
+```
+* Browser sends timer to Web API
+* JS engine continues execution
+
+3️⃣ Callback Queue
+* After 2 seconds, callback moves to Callback (Task) Queue
+
+4️⃣ Event Loop
+* Event loop keeps checking:
+  * Is call stack empty?
+* If yes → moves callback to call stack
+
+5️⃣ Execution
+```js
+console.log("End");
+```
+
+#### Full Example
+**Example:**
+```js
+console.log("Start");
+
+setTimeout(() => {
+  console.log("Timeout");
+}, 0);
+
+console.log("End");
+```
+Output:
+```js
+Start
+End
+Timeout
+```
+-------------------------------------------------------------------------------------------------------------------------
+
 ### Q.16 What is the difference between synchronous and asynchronous JavaScript?
 
 #### 1. Synchronous JavaScript
