@@ -468,6 +468,7 @@ console.log("Start");
 ```
 * Executes immediately.
 
+
 2️⃣ Web APIs
 ```js
 setTimeout(() => {
@@ -477,13 +478,16 @@ setTimeout(() => {
 * Browser sends timer to Web API
 * JS engine continues execution
 
+
 3️⃣ Callback Queue
 * After 2 seconds, callback moves to Callback (Task) Queue
+
 
 4️⃣ Event Loop
 * Event loop keeps checking:
   * Is call stack empty?
 * If yes → moves callback to call stack
+
 
 5️⃣ Execution
 ```js
@@ -507,6 +511,23 @@ Start
 End
 Timeout
 ```
+
+#### ❓ Why?
+* setTimeout goes to Web API
+* Call stack executes sync code first
+* Callback runs last
+
+#### Important Interview Points
+* setTimeout is not exact timing
+* Minimum delay may be affected by:
+ * Call stack blocking
+ * Browser throttling
+ * Minimum delay (4ms in some cases)
+
+#### setTimeout in Node.js
+* Uses libuv
+* Timer handled in Timers Phase
+* Callback pushed to event loop when ready
 -------------------------------------------------------------------------------------------------------------------------
 
 ### Q.16 What is the difference between synchronous and asynchronous JavaScript?
