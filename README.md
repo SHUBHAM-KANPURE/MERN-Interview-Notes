@@ -364,7 +364,7 @@ console.log(obj1.address.city); // Indore ✅
 ### Q.11 Arrow function vs normal function
 
 #### 1. Normal Function
-**Definition:** A `normal function` is defined using the `function` keyword. It has its own `this`, `arguments`, and can be used as a constructor.
+**Definition:** A `normal function` is defined using the `function` keyword. It has its own `this`, `arguments`, and can be used as a *constructor*.
 
 **Example:**
 ```js
@@ -378,7 +378,7 @@ greet.call(user); // Shubham
 
 #### 2. Arrow Function
 **Definition:** An `arrow function` is a shorter syntax function that does NOT have its own `this`.
-It inherits `this` from its parent (lexical scope).
+It inherits `this` from its *parent (lexical scope)*.
 
 **Example:**
 ```js
@@ -386,6 +386,29 @@ const greet = () => {
   console.log(this.name);
 };
 ```
+-------------------------------------------------------------------------------------------------------------------------
+
+### Q.12 What is currying?
+
+**Definition:** `Currying` is a technique where a function with *multiple arguments* is transformed into a sequence of *functions, each taking one argument*.
+
+**Example:**
+```js
+function multiply(a) {
+  return function (b) {
+    return a * b;
+  };
+}
+
+multiply(2)(3); // 6
+```
+
+#### Why Use Currying?
+
+* Code reusability
+* Cleaner & readable code
+* Partial application
+* Useful in functional programming
 -------------------------------------------------------------------------------------------------------------------------
 
 ### Q.16 What is the difference between synchronous and asynchronous JavaScript?
