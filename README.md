@@ -418,6 +418,41 @@ multiply(2)(3); // 6
 
 -------------------------------------------------------------------------------------------------------------------------
 
+### Q.14 What is optional chaining?
+
+**Definition:** `Optional chaining` (`?.`) is a JavaScript feature that allows you to safely access nested object properties or call functions without throwing an error if a value is `null` or `undefined`.
+
+#### Without Optional Chaining
+```JS
+const user = {};
+
+console.log(user.profile.name); // ❌ Error
+```
+
+#### With Optional Chaining
+```JS
+const user = {};
+
+console.log(user.profile?.name); // undefined ✅
+```
+
+#### Function Call Example
+```js
+user.sayHello?.(); // Executes only if function exists
+```
+
+#### Array Example
+```js
+users?.[0]?.name;
+```
+
+#### Why Use Optional Chaining?
+
+* Prevents runtime errors
+* Cleaner & readable code
+* Useful for API responses
+-------------------------------------------------------------------------------------------------------------------------
+
 ### Q.16 What is the difference between synchronous and asynchronous JavaScript?
 
 #### 1. Synchronous JavaScript
