@@ -359,12 +359,13 @@ console.log(obj1.address.city); // Indore ✅
 ### Q.10 Explain this keyword in different contexts
 
 **Definition:** `this` refers to the object that is currently "executing" the function. Its value isn't fixed — it depends on how a function is called, not where it's defined.
+
 -------------------------------------------------------------------------------------------------------------------------
 
 ### Q.11 Arrow function vs normal function
 
 #### 1. Normal Function
-**Definition:** A `normal function` is defined using the `function` keyword. It has its own `this`, `arguments`, and can be used as a *constructor*.
+**Definition:** A `normal function` is defined using the `function` keyword. It has its own `this`, `arguments`, and can be used as a constructor.
 
 **Example:**
 ```js
@@ -390,7 +391,7 @@ const greet = () => {
 
 ### Q.12 What is currying?
 
-**Definition:** `Currying` is a technique where a function with *multiple arguments* is transformed into a sequence of *functions, each taking one argument*.
+**Definition:** `Currying` is a technique where a function with multiple arguments is transformed into a sequence of functions, each taking one argument.
 
 **Example:**
 ```js
@@ -409,6 +410,12 @@ multiply(2)(3); // 6
 * Cleaner & readable code
 * Partial application
 * Useful in functional programming
+-------------------------------------------------------------------------------------------------------------------------
+
+### Q.13 Explain memory leaks in JS
+
+**Definition:** A `memory leak` occurs when a program keeps using memory that is no longer needed because it is not released by the garbage collector.
+
 -------------------------------------------------------------------------------------------------------------------------
 
 ### Q.16 What is the difference between synchronous and asynchronous JavaScript?
