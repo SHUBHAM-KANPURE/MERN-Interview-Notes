@@ -625,6 +625,41 @@ Because JavaScript converts "5" (string) to 5 (number).
 Because:
 * 5 → number
 * "5" → string
+-------------------------------------------------------------------------------------------------------------------------
+
+### Q.19 `null` vs `undefined`?
+
+**Definition:** Both represent absence of a value, but they are used in different situations.
+
+| `null`                                    | `undefined`                                           |
+| ----------------------------------------- | ----------------------------------------------------- |
+| Represents an **intentional empty value** | Represents a value that is **not assigned/available** |
+| Developer usually assigns it explicitly   | JavaScript often assigns it automatically             |
+| `typeof null` → `"object"`                | `typeof undefined` → `"undefined"`                    |
+
+#### 1. null
+**Definition:** `null` means we intentionally want no value.
+
+**Example:**
+```jsx
+let user = null;
+console.log(user); // null
+```
+
+#### 2. undefined
+**Definition:** A variable is declared but no value is assigned:
+
+**Example:**
+```jsx
+let name;
+console.log(name); // undefined
+```
+JavaScript automatically gives it undefined.
+
+#### Important Difference
+* null == undefined   // true
+* null === undefined  // false
+== performs type coercion, while === checks both value and type.
 
 -------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------
