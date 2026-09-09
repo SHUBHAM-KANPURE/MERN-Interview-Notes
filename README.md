@@ -594,6 +594,39 @@ console.log("End");
 **Definition:** `Macrotasks` are executed after the microtask queue is empty.
 
 -------------------------------------------------------------------------------------------------------------------------
+
+### Q.18 == vs ===?
+
+**Definition:** Both are comparison operators, but they work differently:
+
+| Operator | Name            | Type Conversion |
+| -------- | --------------- | --------------- |
+| `==`     | Loose Equality  | Yes             |
+| `===`    | Strict Equality | No              |
+
+#### 1. == — Loose Equality
+**Definition:** It compares values after type conversion if needed.
+
+**Example:**
+```js
+5 == "5"
+//Output: true
+```
+Because JavaScript converts "5" (string) to 5 (number).
+
+#### 2. === — Strict Equality
+**Definition:** It compares both value and data type. No type conversion happens.
+
+**Example:**
+```js
+5 === "5"
+//Output: false
+```
+Because:
+* 5 → number
+* "5" → string
+
+-------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------
 
 ## -> React.js
