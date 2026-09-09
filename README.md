@@ -554,6 +554,46 @@ setTimeout(() => {
 console.log("End");
 ```
 -------------------------------------------------------------------------------------------------------------------------
+
+### Q.17 Microtask queue vs macrotask queue?
+
+**Definition:** 
+In JavaScript, asynchronous callbacks are placed into different queues. The microtask queue has higher priority than the macrotask queue.
+
+#### Common examples:
+
+* setTimeout()
+* setInterval()
+* setImmediate() in Node.js
+
+**Example:**
+```js
+console.log("Start");
+
+setTimeout(() => {
+    console.log("Macrotask");
+}, 0);
+
+Promise.resolve().then(() => {
+    console.log("Microtask");
+});
+
+console.log("End");
+
+// Output:
+	// Start
+	// End
+	// Microtask
+	// Macrotask
+```
+
+#### 1. Microtask Queue
+**Definition:** `Microtasks` are executed after the current synchronous code finishes and before the next macrotask.
+
+#### 2. Macrotask Queue
+**Definition:** `Macrotasks` are executed after the microtask queue is empty.
+
+-------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------
 
 ## -> React.js
