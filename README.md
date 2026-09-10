@@ -264,7 +264,7 @@ fetchData()
 #### What is async/await?
 **Definition:** 
 `Async` and `await` are programming keywords used to write asynchronous code—code that runs in the background without freezing your main program—so it looks and reads like simple step-by-step synchronous code.
-#####`or`
+
 `async/await` is syntactic sugar over promises that allows writing asynchronous code in a `synchronous-looking` way.
 
 #### 1. What is async?
