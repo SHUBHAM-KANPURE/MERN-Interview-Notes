@@ -262,7 +262,22 @@ fetchData()
 ```
 
 #### What is async/await?
-**Definition:** `async/await` is syntactic sugar over promises that allows writing asynchronous code in a `synchronous-looking` way.
+**Definition:** 
+`Async` and `await` are programming keywords used to write asynchronous code—code that runs in the background without freezing your main program—so it looks and reads like simple step-by-step synchronous code.
+#####`or`
+`async/await` is syntactic sugar over promises that allows writing asynchronous code in a `synchronous-looking` way.
+
+#### 1. What is async?
+* The `async` keyword goes before a function definition.
+* It tells the computer that the function handles background tasks.
+* An async function always returns a promise (a guarantee of a future value).
+* If you return a normal value, the system wraps it in a resolved promise automatically.
+
+#### 2. What is await?
+* The await keyword goes inside an async function.
+* It tells the program to pause and wait for a background task to finish before moving to the next line.
+* It does not freeze the whole app or browser; other parts of the program can still run.
+* You can only use await inside an async
 
 **Example:**
 ```js
