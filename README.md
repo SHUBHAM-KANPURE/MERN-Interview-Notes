@@ -675,7 +675,38 @@ JavaScript automatically gives it undefined.
 * null == undefined   // true
 * null === undefined  // false
 == performs type coercion, while === checks both value and type.
+-------------------------------------------------------------------------------------------------------------------------
 
+### Q.20 What are prototype and prototype inheritance?
+
+#### 1. What is a Prototype?
+**Definition:** A `prototype` is an object from which another object can inherit properties and methods.
+Every JavaScript object has an internal link to another object called its prototype.
+
+**Example:**
+```js
+const user = {
+  name: "Shubham"
+};
+
+console.log(user.toString());
+```
+
+#### 2. What is Prototype Inheritance?
+**Definition:** Prototype inheritance means an object can access properties and methods from its prototype.
+
+**Example:**
+```js
+const person = {
+  greet() {
+    console.log("Hello");
+  }
+};
+
+const user = Object.create(person);
+
+user.greet();
+```
 -------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------
 
