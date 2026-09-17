@@ -1195,7 +1195,7 @@ server.listen(3000);
 ### Q.10 What is cluster module?
 **Definition:** The `cluster` module allows Node.js to create multiple worker processes so an application can use multiple CPU cores and handle more traffic.
 
-**Definition:** #### Why Clusters Are Used
+#### Why Clusters Are Used
 * High Availability: If one node crashes, other nodes take over so the app stays online.
 * Load Balancing: Work traffic is split across multiple machines so no single server gets overwhelmed.
 * Scalability: You can add more nodes ("scale horizontally") when your app gets more users or data. 
