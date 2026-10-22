@@ -1220,7 +1220,7 @@ if (cluster.isPrimary) {
 👉 Each worker is a separate Node.js process and can handle requests independently.
 -------------------------------------------------------------------------------------------------------------------------
 
-### Q.11 What is Closer
+### Q.11 What is Closure
 
 **Definition:** A `closure` is created when a function remembers variables from its outer (lexical) scope, even after the outer function has finished executing.
 
@@ -2029,7 +2029,7 @@ one("Shubham", two);
 ```
 -------------------------------------------------------------------------------------------------------------------------
 
-### Q.13. Closer example
+### Q.13. Closure example
 
 **Definition:**
 A closure is created when a function remembers variables from its outer (lexical) scope, even after the outer function has finished executing.
