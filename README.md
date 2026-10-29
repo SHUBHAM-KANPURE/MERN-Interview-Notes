@@ -713,7 +713,14 @@ user.greet();
 ## -> React.js
 
 ### Q.1 What is virtual DOM?
-**Definition:** `Virtual DOM` is a lightweight in-memory representation of the real DOM. React compares the previous and new Virtual DOM and updates only the necessary parts of the real DOM.
+**Definition:** `Virtual DOM` is a lightweight JavaScript copy of the real DOM that React keeps in memory. Updating the real DOM is slow, so React first works on the virtual one.
+
+#### How it works:
+
+State changes, so React creates a new Virtual DOM tree.
+Diffing: React compares the new tree with the previous one.
+Reconciliation: React finds the minimum changes needed.
+Only those changes are applied to the real DOM (batched).
 
 **Example:**
 ```jsx
