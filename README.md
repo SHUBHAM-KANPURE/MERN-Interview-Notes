@@ -51,9 +51,8 @@ obj.name = "Shivam"; // allowed (object mutation)
 ```js
 console.log(a); // undefined
 var a = 10;
-<img width="1186" height="606" alt="image" src="https://github.com/user-attachments/assets/3ce21fd6-3078-4bf6-b03d-e21629a6142e" />
-
 ```
+<img width="1186" height="606" alt="image" src="https://github.com/user-attachments/assets/3ce21fd6-3078-4bf6-b03d-e21629a6142e" />
 -------------------------------------------------------------------------------------------------------------------------
 
 ### Q.3 What is closure? Where have you used it?
