@@ -45,12 +45,14 @@ obj.name = "Shivam"; // allowed (object mutation)
 -------------------------------------------------------------------------------------------------------------------------
 
 ### Q.2 Explain hoisting with example
-**Definition:** `Hoisting` is JavaScript’s behavior where variable and function declarations are moved to the top of their scope during compilation, before code execution.
+**Definition:** `Hoisting` is JavaScript’s behavior where variable and function declarations are moved to the top of their scope during compliation, before code execution.
 
 **Example:**
 ```js
 console.log(a); // undefined
 var a = 10;
+<img width="1186" height="606" alt="image" src="https://github.com/user-attachments/assets/3ce21fd6-3078-4bf6-b03d-e21629a6142e" />
+
 ```
 -------------------------------------------------------------------------------------------------------------------------
 
